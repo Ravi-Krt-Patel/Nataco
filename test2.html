@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		html{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.container{
+			display:flex;
+			justify-content:space-around;
+		}
+		.hover_effect{
+			position: relative;
+			width: 20vw;
+			height: 30vw;
+			box-sizing:border-box;
+			overflow: hidden;
+			background-color:rgb(247, 152, 152);
+			box-shadow: 0 0 15px 7px rgba(25, 255, 25, 0.5);
+
+		}
+		img{
+			width: 20vw;
+			height: 20vw;
+			position: absolute;
+			top:33%;
+			left:50%;
+			transform:translate(-50%, -50%);
+		}
+		.hover_effect:hover img{
+			transform:translate(-50%, -50%) scale(1.5);
+			transition:.8s;
+		}
+		.hover_effect:after{
+			content:"";
+			position:absolute;
+			width: 60vw;
+			height: 60vw;
+			box-sizing:border-box;
+			overflow: hidden;
+			top:50%;
+			left:50%;
+			background-color:rgba(247, 152, 152,0);
+			transform:translate(-50%,-50%);
+			z-index: 10;
+		}
+		.hover_effect:hover::after{
+			
+			background-color:rgba(247, 152, 152,.6);
+			transition:.8s;
+		}
+		@media(max-width:800px){
+			.container{
+				flex-direction: column;
+			}
+			.hover_effect{
+				width:200px;
+				height:200px;
+				margin: 30px;
+			}
+		}
+		.div{
+			position: absolute;
+			bottom:0;
+		}
+	</style>
+</head>
+<body>
+	<div class="container" >
+		
+			<a href="" class="hover_effect" >
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTAYhFkNrmRfN1VFDiPc-H-l2FEm5MRs2raw&usqp=CAU" alt="">
+				<div class="div">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, unde.
+				</div>
+				
+			</a>
+			
+		
+			<a href="" class="hover_effect">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdXslbmyCbl9IYLMqhSyyWq_OMRbfsDuLssw&usqp=CAU" alt="">
+				
+			</a>
+		
+			<a href="" class="hover_effect">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSczayTUInoY1Ya1EAAHK7NYbYggbmDzFJe8w&usqp=CAU" alt="">
+			</a>
+		
+		
+			<a href="" class="hover_effect">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_LhZOKN0o6Ak0qPivLkQj7gF4deb0H8tDjA&usqp=CAU" alt="">
+				
+			</a>
+		
+		
+	</div>
+</body>
+</html>
